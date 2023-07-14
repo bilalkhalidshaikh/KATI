@@ -312,7 +312,7 @@ const AnimatedBox = styled(Box)({
 const DashboardPage = () => {
   return (
     <ThemeProvider theme={theme}>
-      <AnimatedBox sx={{ p: 3 }}>
+      {/* <AnimatedBox sx={{ p: 3 }}> */}
         <Typography variant="h4" gutterBottom>
           Booking
         </Typography>
@@ -443,7 +443,7 @@ const DashboardPage = () => {
             </Typography>
           </CardContent>
         </StyledCard>
-      </AnimatedBox>
+      {/* </AnimatedBox> */}
     </ThemeProvider>
   );
 };
