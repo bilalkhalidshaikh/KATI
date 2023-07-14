@@ -50,7 +50,7 @@ const navigation = () => {
     {
       title: 'Chat',
       icon: Chat,
-      path: '/'
+      path: '/pages/chat'
     },
     // {
     //   title: 'Icons',
