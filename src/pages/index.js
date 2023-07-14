@@ -281,6 +281,7 @@ import {
   AttachMoney,
   HelpOutline,
   BusinessCenter,
+  NotificationsNoneIcon
 } from "@mui/icons-material";
 
 const theme = createTheme({
@@ -314,7 +315,7 @@ const DashboardPage = () => {
     <ThemeProvider theme={theme}>
       {/* <AnimatedBox sx={{ p: 3 }}> */}
         <Typography variant="h4" gutterBottom>
-          Booking
+          Bookings
         </Typography>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={4}>
@@ -424,7 +425,7 @@ const DashboardPage = () => {
                 <Typography variant="h6" gutterBottom>
                   Conversions
                 </Typography>
-                <Typography variant="h4">10</Typography>
+                <Typography variant="h4">10%</Typography>
               </CardContent>
             </StyledCard>
           </Grid>
@@ -436,10 +437,13 @@ const DashboardPage = () => {
         <StyledCard>
           <CardContent>
             <Typography variant="body1" gutterBottom>
-              User sent you a message
+            <NotificationsNoneIcon/>  User sent you a message
             </Typography>
             <Typography variant="body1" gutterBottom>
-              Booking completed
+            <NotificationsNoneIcon/>  Booking completed
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+            <NotificationsNoneIcon/> Total Earnings this week
             </Typography>
           </CardContent>
         </StyledCard>
