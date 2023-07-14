@@ -281,8 +281,8 @@ import {
   AttachMoney,
   HelpOutline,
   BusinessCenter,
-  NotificationsNoneIcon
 } from "@mui/icons-material";
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 
 const theme = createTheme({
   palette: {
