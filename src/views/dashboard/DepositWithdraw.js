@@ -67,14 +67,14 @@ const withdrawData = [
     logo: '/images/logos/github.png',
     subtitle: 'Security & compliance'
   },
-  {
-    logoWidth: 30,
-    logoHeight: 30,
-    amount: '-$450',
-    title: 'Upgrade Slack Plan',
-    subtitle: 'Debit card deposit',
-    logo: '/images/logos/slack.png'
-  },
+  // {
+  //   logoWidth: 30,
+  //   logoHeight: 30,
+  //   amount: '-$450',
+  //   title: 'Upgrade Slack Plan',
+  //   subtitle: 'Debit card deposit',
+  //   logo: '/images/logos/slack.png'
+  // },
   {
     logoWidth: 30,
     logoHeight: 30,

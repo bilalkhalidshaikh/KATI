@@ -68,19 +68,19 @@ const UserDropdown = () => {
     <Fragment>
       <Badge
         overlap='circular'
-        onClick={handleDropdownOpen}
+        // onClick={handleDropdownOpen}
         sx={{ ml: 2, cursor: 'pointer' }}
         badgeContent={<BadgeContentSpan />}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
       >
         <Avatar
           alt='John Doe'
-          onClick={handleDropdownOpen}
+          // onClick={handleDropdownOpen}
           sx={{ width: 40, height: 40 }}
           src='/images/avatars/1.png'
         />
       </Badge>
-      <Menu
+      {/* <Menu
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
         onClose={() => handleDropdownClose()}
@@ -148,7 +148,7 @@ const UserDropdown = () => {
           <LogoutVariant sx={{ marginRight: 2, fontSize: '1.375rem', color: 'text.secondary' }} />
           Logout
         </MenuItem>
-      </Menu>
+      </Menu> */}
     </Fragment>
   )
 }
