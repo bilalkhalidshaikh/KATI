@@ -265,6 +265,206 @@
 
 
 
+// import React from "react";
+// import {
+//   Box,
+//   Card,
+//   CardContent,
+//   Grid,
+//   Typography,
+//   ThemeProvider,
+//   createTheme,
+// } from "@mui/material";
+// import { styled } from "@mui/system";
+// import {
+//   Poll,
+//   AttachMoney,
+//   HelpOutline,
+//   BusinessCenter,
+// } from "@mui/icons-material";
+// import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+
+// const theme = createTheme({
+//   palette: {
+//     primary: {
+//       main: "#9c27b0",
+//     },
+//   },
+// });
+
+// const StyledCard = styled(Card)(({ theme }) => ({
+//   boxShadow: theme.shadows[3],
+//   transition: "box-shadow 0.3s ease-in-out",
+//   "&:hover": {
+//     boxShadow: theme.shadows[5],
+//   },
+// }));
+
+// const AnimatedBox = styled(Box)({
+//   animation: `$fadeIn 0.5s ease-in-out`,
+//   animationFillMode: "forwards",
+//   opacity: 0,
+//   "@keyframes fadeIn": {
+//     "0%": { opacity: 0 },
+//     "100%": { opacity: 1 },
+//   },
+// });
+
+// const DashboardPage = () => {
+//   return (
+//     <ThemeProvider theme={theme}>
+//       {/* <AnimatedBox sx={{ p: 3 }}> */}
+//         <Typography variant="h4" gutterBottom>
+//           Bookings
+//         </Typography>
+//         <Grid container spacing={3}>
+//           <Grid item xs={12} sm={4}>
+//             <StyledCard>
+//               <CardContent>
+//                 <Poll fontSize="large" color="primary" />
+//                 <Typography variant="h6" gutterBottom>
+//                   Completed Bookings
+//                 </Typography>
+//                 <Typography variant="h4">10</Typography>
+//               </CardContent>
+//             </StyledCard>
+//           </Grid>
+//           <Grid item xs={12} sm={4}>
+//             <StyledCard>
+//               <CardContent>
+//                 <Poll fontSize="large" color="primary" />
+//                 <Typography variant="h6" gutterBottom>
+//                   Ongoing Bookings
+//                 </Typography>
+//                 <Typography variant="h4">5</Typography>
+//               </CardContent>
+//             </StyledCard>
+//           </Grid>
+//           <Grid item xs={12} sm={4}>
+//             <StyledCard>
+//               <CardContent>
+//                 <Poll fontSize="large" color="primary" />
+//                 <Typography variant="h6" gutterBottom>
+//                   Canceled Bookings
+//                 </Typography>
+//                 <Typography variant="h4">3</Typography>
+//               </CardContent>
+//             </StyledCard>
+//           </Grid>
+//         </Grid>
+
+//         <Typography variant="h4" gutterBottom sx={{ mt: 4 }}>
+//           Revenue
+//         </Typography>
+//         <Grid container spacing={3}>
+//           <Grid item xs={12} sm={4}>
+//             <StyledCard>
+//               <CardContent>
+//                 <AttachMoney fontSize="large" color="primary" />
+//                 <Typography variant="h6" gutterBottom>
+//                   Total Earnings
+//                 </Typography>
+//                 <Typography variant="h4">$1000</Typography>
+//               </CardContent>
+//             </StyledCard>
+//           </Grid>
+//           <Grid item xs={12} sm={4}>
+//             <StyledCard>
+//               <CardContent>
+//                 <AttachMoney fontSize="large" color="primary" />
+//                 <Typography variant="h6" gutterBottom>
+//                   Expected Earnings
+//                 </Typography>
+//                 <Typography variant="h4">$800</Typography>
+//               </CardContent>
+//             </StyledCard>
+//           </Grid>
+//           <Grid item xs={12} sm={4}>
+//             <StyledCard>
+//               <CardContent>
+//                 <AttachMoney fontSize="large" color="primary" />
+//                 <Typography variant="h6" gutterBottom>
+//                   Canceled Earnings
+//                 </Typography>
+//                 <Typography variant="h4">$200</Typography>
+//               </CardContent>
+//             </StyledCard>
+//           </Grid>
+//         </Grid>
+
+//         <Typography variant="h4" gutterBottom sx={{ mt: 4 }}>
+//           Statistics
+//         </Typography>
+//         <Grid container spacing={3}>
+//           <Grid item xs={12} sm={4}>
+//             <StyledCard>
+//               <CardContent>
+//                 <HelpOutline fontSize="large" color="primary" />
+//                 <Typography variant="h6" gutterBottom>
+//                   Impressions
+//                 </Typography>
+//                 <Typography variant="h4">5000</Typography>
+//               </CardContent>
+//             </StyledCard>
+//           </Grid>
+//           <Grid item xs={12} sm={4}>
+//             <StyledCard>
+//               <CardContent>
+//                 <HelpOutline fontSize="large" color="primary" />
+//                 <Typography variant="h6" gutterBottom>
+//                   Clicks
+//                 </Typography>
+//                 <Typography variant="h4">200</Typography>
+//               </CardContent>
+//             </StyledCard>
+//           </Grid>
+//           <Grid item xs={12} sm={4}>
+//             <StyledCard>
+//               <CardContent>
+//                 <HelpOutline fontSize="large" color="primary" />
+//                 <Typography variant="h6" gutterBottom>
+//                   Conversions
+//                 </Typography>
+//                 <Typography variant="h4">10%</Typography>
+//               </CardContent>
+//             </StyledCard>
+//           </Grid>
+//         </Grid>
+
+//         <Typography variant="h4" gutterBottom sx={{ mt: 4 }}>
+//           Recent Activities
+//         </Typography>
+//         <StyledCard>
+//           <CardContent>
+//             <Typography variant="body1" gutterBottom>
+//             <NotificationsNoneIcon/>  User sent you a message
+//             </Typography>
+//             <Typography variant="body1" gutterBottom>
+//             <NotificationsNoneIcon/>  Booking completed
+//             </Typography>
+//             <Typography variant="body1" gutterBottom>
+//             <NotificationsNoneIcon/> Total Earnings this week
+//             </Typography>
+//           </CardContent>
+//         </StyledCard>
+//       {/* </AnimatedBox> */}
+//     </ThemeProvider>
+//   );
+// };
+
+// export default DashboardPage;
+
+
+
+
+
+
+
+
+
+
+
+
 import React from "react";
 import {
   Box,
@@ -274,6 +474,8 @@ import {
   Typography,
   ThemeProvider,
   createTheme,
+  Tab,
+  Tabs,
 } from "@mui/material";
 import { styled } from "@mui/system";
 import {
@@ -311,47 +513,100 @@ const AnimatedBox = styled(Box)({
 });
 
 const DashboardPage = () => {
+  const [activeTab, setActiveTab] = React.useState(0);
+
+  const handleTabChange = (event, newValue) => {
+    setActiveTab(newValue);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       {/* <AnimatedBox sx={{ p: 3 }}> */}
         <Typography variant="h4" gutterBottom>
           Bookings
         </Typography>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={4}>
-            <StyledCard>
-              <CardContent>
-                <Poll fontSize="large" color="primary" />
-                <Typography variant="h6" gutterBottom>
-                  Completed Bookings
-                </Typography>
-                <Typography variant="h4">10</Typography>
-              </CardContent>
-            </StyledCard>
+
+        <Tabs
+          value={activeTab}
+          onChange={handleTabChange}
+          indicatorColor="primary"
+          textColor="primary"
+          variant="fullWidth"
+          sx={{ mb: 3 }}
+        >
+          <Tab label="Pending Bookings" />
+          <Tab label="Ongoing Bookings" />
+          <Tab label="Canceled Bookings" />
+          <Tab label="Completed Bookings" />
+        </Tabs>
+
+        {activeTab === 0 && (
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={4}>
+              <StyledCard>
+                <CardContent>
+                  <Poll fontSize="large" color="primary" />
+                  <Typography variant="h6" gutterBottom>
+                    Pending Bookings
+                  </Typography>
+                  <Typography variant="h4">8</Typography>
+                </CardContent>
+              </StyledCard>
+            </Grid>
+            {/* Add more cards for pending bookings */}
           </Grid>
-          <Grid item xs={12} sm={4}>
-            <StyledCard>
-              <CardContent>
-                <Poll fontSize="large" color="primary" />
-                <Typography variant="h6" gutterBottom>
-                  Ongoing Bookings
-                </Typography>
-                <Typography variant="h4">5</Typography>
-              </CardContent>
-            </StyledCard>
+        )}
+
+        {activeTab === 1 && (
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={4}>
+              <StyledCard>
+                <CardContent>
+                  <BusinessCenter fontSize="large" color="primary" />
+                  <Typography variant="h6" gutterBottom>
+                    Ongoing Bookings
+                  </Typography>
+                  <Typography variant="h4">4</Typography>
+                </CardContent>
+              </StyledCard>
+            </Grid>
+            {/* Add more cards for ongoing bookings */}
           </Grid>
-          <Grid item xs={12} sm={4}>
-            <StyledCard>
-              <CardContent>
-                <Poll fontSize="large" color="primary" />
-                <Typography variant="h6" gutterBottom>
-                  Canceled Bookings
-                </Typography>
-                <Typography variant="h4">3</Typography>
-              </CardContent>
-            </StyledCard>
+        )}
+
+        {activeTab === 2 && (
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={4}>
+              <StyledCard>
+                <CardContent>
+                  <HelpOutline fontSize="large" color="primary" />
+                  <Typography variant="h6" gutterBottom>
+                    Canceled Bookings
+                  </Typography>
+                  <Typography variant="h4">2</Typography>
+                </CardContent>
+              </StyledCard>
+            </Grid>
+            {/* Add more cards for canceled bookings */}
           </Grid>
-        </Grid>
+        )}
+
+        {activeTab === 3 && (
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={4}>
+              <StyledCard>
+                <CardContent>
+                  <AttachMoney fontSize="large" color="primary" />
+                  <Typography variant="h6" gutterBottom>
+                    Completed Bookings
+                  </Typography>
+                  <Typography variant="h4">10</Typography>
+                </CardContent>
+              </StyledCard>
+            </Grid>
+            {/* Add more cards for completed bookings */}
+          </Grid>
+        )}
 
         <Typography variant="h4" gutterBottom sx={{ mt: 4 }}>
           Revenue
@@ -437,13 +692,13 @@ const DashboardPage = () => {
         <StyledCard>
           <CardContent>
             <Typography variant="body1" gutterBottom>
-            <NotificationsNoneIcon/>  User sent you a message
+              <NotificationsNoneIcon /> User sent you a message
             </Typography>
             <Typography variant="body1" gutterBottom>
-            <NotificationsNoneIcon/>  Booking completed
+              <NotificationsNoneIcon /> Booking completed
             </Typography>
             <Typography variant="body1" gutterBottom>
-            <NotificationsNoneIcon/> Total Earnings this week
+              <NotificationsNoneIcon /> Total Earnings this week
             </Typography>
           </CardContent>
         </StyledCard>
@@ -452,4 +707,4 @@ const DashboardPage = () => {
   );
 };
 
-export default DashboardPage;
+export default DashboardPage
