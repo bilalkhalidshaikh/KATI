@@ -7,6 +7,7 @@ import FormatLetterCase from 'mdi-material-ui/FormatLetterCase'
 import AccountCogOutline from 'mdi-material-ui/AccountCogOutline'
 import CreditCardOutline from 'mdi-material-ui/CreditCardOutline'
 import AccountPlusOutline from 'mdi-material-ui/AccountPlusOutline'
+import BookInformationVariant from 'mdi-material-ui/BookInformationVariant'
 import Chat from 'mdi-material-ui/Chat'
 import AlertCircleOutline from 'mdi-material-ui/AlertCircleOutline'
 import GoogleCirclesExtended from 'mdi-material-ui/GoogleCirclesExtended'
@@ -37,6 +38,12 @@ const navigation = () => {
       icon: AccountPlusOutline,
       path: '/pages/register',
       openInNewTab: true
+    },
+    {
+      title: 'Bookings',
+      icon: BookInformationVariant,
+      path: '/pages/bookings',
+      openInNewTab: false
     },
     // {
     //   title: 'Error',
