@@ -242,10 +242,10 @@ const LoginPage = () => {
           </form>
         </CardContent>
       </Card>
-      <FooterIllustrationsV1 />
-    </Box>
-  )
-}
+      </Box>
+      )
+    }
+    // <FooterIllustrationsV1 />
 LoginPage.getLayout = page => <BlankLayout>{page}</BlankLayout>
 
 export default LoginPage

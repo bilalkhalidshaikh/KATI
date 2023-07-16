@@ -246,10 +246,10 @@ const RegisterPage = () => {
           </form>
         </CardContent>
       </Card>
-      <FooterIllustrationsV1 />
-    </Box>
-  )
-}
+      </Box>
+      )
+    }
+    // <FooterIllustrationsV1 />
 RegisterPage.getLayout = page => <BlankLayout>{page}</BlankLayout>
 
 export default RegisterPage
