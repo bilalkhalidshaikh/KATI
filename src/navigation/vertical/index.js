@@ -27,18 +27,18 @@ const navigation = () => {
     {
       sectionTitle: 'Pages'
     },
-    {
-      title: 'Login',
-      icon: Login,
-      path: '/login',
-      openInNewTab: true
-    },
-    {
-      title: 'Register',
-      icon: AccountPlusOutline,
-      path: '/register',
-      openInNewTab: true
-    },
+    // {
+    //   title: 'Login',
+    //   icon: Login,
+    //   path: '/login',
+    //   openInNewTab: true
+    // },
+    // {
+    //   title: 'Register',
+    //   icon: AccountPlusOutline,
+    //   path: '/register',
+    //   openInNewTab: true
+    // },
     {
       title: 'Bookings',
       icon: BookInformationVariant,
