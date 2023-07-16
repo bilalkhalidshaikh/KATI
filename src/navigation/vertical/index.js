@@ -17,7 +17,7 @@ const navigation = () => {
     {
       title: 'Dashboard',
       icon: HomeOutline,
-      path: '/'
+      path: '/dashboard'
     },
     {
       title: 'Account Settings',
@@ -30,13 +30,13 @@ const navigation = () => {
     {
       title: 'Login',
       icon: Login,
-      path: '/pages/login',
+      path: '/login',
       openInNewTab: true
     },
     {
       title: 'Register',
       icon: AccountPlusOutline,
-      path: '/pages/register',
+      path: '/register',
       openInNewTab: true
     },
     {
