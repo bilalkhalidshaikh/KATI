@@ -16,6 +16,8 @@ import {
 import { styled } from '@mui/system'
 import { AccessTime, EventBusy, CheckCircle, QueryBuilder, ArrowBack, ArrowForward } from '@mui/icons-material'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
+import Link from 'next/link'
+
 
 const theme = createTheme({
   palette: {
@@ -80,7 +82,9 @@ const Bookings = () => {
         {activeTab === 0 && (
           <Grid container spacing={3}>
             <Grid item xs={12}>
-              <StyledCard>
+            <Link sx={{cursor:"pointer"}} passHref href='/bookingdetails'>
+
+               <StyledCard style={{cursor:'pointer'}}>
                 <CardContent>
                   <CardHeader>
                     <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -131,6 +135,7 @@ const Bookings = () => {
                   </CardFooter>
                 </CardContent>
               </StyledCard>
+              </Link>
             </Grid>
             {/* Add more pending booking cards */}
           </Grid>
@@ -139,7 +144,8 @@ const Bookings = () => {
         {activeTab === 1 && (
           <Grid container spacing={3}>
             <Grid item xs={12}>
-              <StyledCard>
+            <Link sx={{cursor:"pointer"}} passHref href='/bookingdetails'>
+               <StyledCard style={{cursor:'pointer'}}>
                 <CardContent>
                   <CardHeader>
                     <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -176,6 +182,7 @@ const Bookings = () => {
                   </CardDetails>
                 </CardContent>
               </StyledCard>
+              </Link>
             </Grid>
             {/* Add more ongoing booking cards */}
           </Grid>
@@ -184,7 +191,8 @@ const Bookings = () => {
         {activeTab === 2 && (
           <Grid container spacing={3}>
             <Grid item xs={12}>
-              <StyledCard>
+            <Link sx={{cursor:"pointer"}} passHref href='/bookingdetails'>
+               <StyledCard style={{cursor:'pointer'}}>
                 <CardContent>
                   <CardHeader>
                     <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -224,6 +232,7 @@ const Bookings = () => {
                   </CardDetails>
                 </CardContent>
               </StyledCard>
+              </Link>
             </Grid>
             {/* Add more canceled booking cards */}
           </Grid>
@@ -232,7 +241,8 @@ const Bookings = () => {
         {activeTab === 3 && (
           <Grid container spacing={3}>
             <Grid item xs={12}>
-              <StyledCard>
+            <Link sx={{cursor:"pointer"}} passHref href='/bookingdetails'>
+               <StyledCard style={{cursor:'pointer'}}>
                 <CardContent>
                   <CardHeader>
                     <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -272,6 +282,7 @@ const Bookings = () => {
                   </CardDetails>
                 </CardContent>
               </StyledCard>
+              </Link>
             </Grid>
             {/* Add more completed booking cards */}
           </Grid>

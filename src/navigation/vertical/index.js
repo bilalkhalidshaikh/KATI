@@ -11,6 +11,8 @@ import BookInformationVariant from 'mdi-material-ui/BookInformationVariant'
 import Chat from 'mdi-material-ui/Chat'
 import AlertCircleOutline from 'mdi-material-ui/AlertCircleOutline'
 import GoogleCirclesExtended from 'mdi-material-ui/GoogleCirclesExtended'
+import { Poll, AttachMoney, HelpOutline, BusinessCenter ,Inbox} from '@mui/icons-material'
+
 
 const navigation = () => {
   return [
@@ -20,31 +22,37 @@ const navigation = () => {
       path: '/dashboard'
     },
     {
-      title: 'Account Settings',
-      icon: AccountCogOutline,
-      path: '/account-settings'
-    },
-    {
       sectionTitle: 'Pages'
     },
     // {
-    //   title: 'Login',
+      //   title: 'Login',
     //   icon: Login,
     //   path: '/login',
     //   openInNewTab: true
     // },
     // {
-    //   title: 'Register',
-    //   icon: AccountPlusOutline,
-    //   path: '/register',
-    //   openInNewTab: true
-    // },
-    {
-      title: 'Bookings',
-      icon: BookInformationVariant,
-      path: '/pages/bookings',
-      openInNewTab: false
-    },
+      //   title: 'Register',
+      //   icon: AccountPlusOutline,
+      //   path: '/register',
+      //   openInNewTab: true
+      // },
+      {
+        title: 'Bookings',
+        icon: BookInformationVariant,
+        path: '/pages/bookings',
+        openInNewTab: false
+      },
+      {
+        title: 'Earnings',
+        icon: AttachMoney,
+        path: '/pages/earnings',
+        openInNewTab: false
+      },
+      {
+        title: 'Account Settings',
+        icon: AccountCogOutline,
+        path: '/account-settings'
+      },
     // {
     //   title: 'Error',
     //   icon: AlertCircleOutline,
@@ -55,8 +63,8 @@ const navigation = () => {
       sectionTitle: 'Other'
     },
     {
-      title: 'Chat',
-      icon: Chat,
+      title: 'Inbox',
+      icon: Inbox,
       path: '/pages/chat'
     },
     // {
@@ -83,3 +91,57 @@ const navigation = () => {
 }
 
 export default navigation
+
+
+
+// import React from 'react';
+// import List from '@mui/material/List';
+// import ListItem from '@mui/material/ListItem';
+// import ListItemIcon from '@mui/material/ListItemIcon';
+// import ListItemText from '@mui/material/ListItemText';
+// import { HomeOutline, BookInformationVariant, AttachMoney, AccountCogOutline, InboxSharp } from '@mui/icons-material';
+
+// const navigation = () => {
+//   return [
+//     {
+//       title: 'Dashboard',
+//       icon: HomeOutline,
+//       path: '/dashboard',
+//     },
+//     {
+//       sectionTitle: 'Pages',
+//     },
+//     {
+//       title: 'Bookings',
+//       icon: BookInformationVariant,
+//       path: '/pages/bookings',
+//       openInNewTab: false,
+//     },
+//     {
+//       title: 'Earnings',
+//       icon: AttachMoney,
+//       path: '/pages/earnings',
+//       openInNewTab: false,
+//     },
+//     {
+//       title: 'Account Settings',
+//       icon: AccountCogOutline,
+//       path: '/account-settings',
+//     },
+//     {
+//       sectionTitle: 'Other',
+//     },
+//     {
+//       title: 'Inbox',
+//       icon: InboxSharp,
+//       path: '/pages/chat',
+//       submenu: [
+//         { avatar: 'user1', name: 'User 1' },
+//         { avatar: 'user2', name: 'User 2' },
+//         // Add more user objects as needed
+//       ],
+//     },
+//   ];
+// };
+
+// export default navigation;

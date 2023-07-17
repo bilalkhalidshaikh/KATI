@@ -103,9 +103,6 @@
 
 // export default Dashboard
 
-
-
-
 // import React from "react";
 // import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
 // import { styled } from "@mui/system";
@@ -137,7 +134,7 @@
 //       </Typography>
 //       <Grid container spacing={3}>
 //         <Grid item xs={12} sm={4}>
-//           <StyledCard>
+//            <StyledCard style={{cursor:'pointer'}}>
 //             <CardContent>
 //               <Typography variant="h6" gutterBottom>
 //                 Completed Bookings
@@ -147,7 +144,7 @@
 //           </StyledCard>
 //         </Grid>
 //         <Grid item xs={12} sm={4}>
-//           <StyledCard>
+//            <StyledCard style={{cursor:'pointer'}}>
 //             <CardContent>
 //               <Typography variant="h6" gutterBottom>
 //                 Ongoing Bookings
@@ -157,7 +154,7 @@
 //           </StyledCard>
 //         </Grid>
 //         <Grid item xs={12} sm={4}>
-//           <StyledCard>
+//            <StyledCard style={{cursor:'pointer'}}>
 //             <CardContent>
 //               <Typography variant="h6" gutterBottom>
 //                 Canceled Bookings
@@ -173,7 +170,7 @@
 //       </Typography>
 //       <Grid container spacing={3}>
 //         <Grid item xs={12} sm={4}>
-//           <StyledCard>
+//            <StyledCard style={{cursor:'pointer'}}>
 //             <CardContent>
 //               <Typography variant="h6" gutterBottom>
 //                 Total Earnings
@@ -183,7 +180,7 @@
 //           </StyledCard>
 //         </Grid>
 //         <Grid item xs={12} sm={4}>
-//           <StyledCard>
+//            <StyledCard style={{cursor:'pointer'}}>
 //             <CardContent>
 //               <Typography variant="h6" gutterBottom>
 //                 Expected Earnings
@@ -193,7 +190,7 @@
 //           </StyledCard>
 //         </Grid>
 //         <Grid item xs={12} sm={4}>
-//           <StyledCard>
+//            <StyledCard style={{cursor:'pointer'}}>
 //             <CardContent>
 //               <Typography variant="h6" gutterBottom>
 //                 Canceled Earnings
@@ -209,7 +206,7 @@
 //       </Typography>
 //       <Grid container spacing={3}>
 //         <Grid item xs={12} sm={4}>
-//           <StyledCard>
+//            <StyledCard style={{cursor:'pointer'}}>
 //             <CardContent>
 //               <Typography variant="h6" gutterBottom>
 //                 Impressions
@@ -219,7 +216,7 @@
 //           </StyledCard>
 //         </Grid>
 //         <Grid item xs={12} sm={4}>
-//           <StyledCard>
+//            <StyledCard style={{cursor:'pointer'}}>
 //             <CardContent>
 //               <Typography variant="h6" gutterBottom>
 //                 Clicks
@@ -229,7 +226,7 @@
 //           </StyledCard>
 //         </Grid>
 //         <Grid item xs={12} sm={4}>
-//           <StyledCard>
+//            <StyledCard style={{cursor:'pointer'}}>
 //             <CardContent>
 //               <Typography variant="h6" gutterBottom>
 //                 Conversions
@@ -243,7 +240,7 @@
 //       <Typography variant="h4" gutterBottom sx={{ mt: 4 }}>
 //         Recent Activities
 //       </Typography>
-//       <StyledCard>
+//        <StyledCard style={{cursor:'pointer'}}>
 //         <CardContent>
 //           <Typography variant="body1" gutterBottom>
 //             User sent you a message
@@ -260,210 +257,188 @@
 
 // export default DashboardPage;
 
-
-
-
-
-
-import React from "react";
-import {
-  Box,
-  Card,
-  CardContent,
-  Grid,
-  Typography,
-  ThemeProvider,
-  createTheme,
-} from "@mui/material";
-import { styled } from "@mui/system";
-import {
-  Poll,
-  AttachMoney,
-  HelpOutline,
-  BusinessCenter,
-} from "@mui/icons-material";
-import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import React from 'react'
+import { Box, Card, CardContent, Grid, Typography, ThemeProvider, createTheme } from '@mui/material'
+import { styled } from '@mui/system'
+import { Poll, AttachMoney, HelpOutline, BusinessCenter } from '@mui/icons-material'
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone'
+import Link from 'next/link'
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#9c27b0",
-    },
-  },
-});
+      main: '#9c27b0'
+    }
+  }
+})
 
 const StyledCard = styled(Card)(({ theme }) => ({
   boxShadow: theme.shadows[3],
-  transition: "box-shadow 0.3s ease-in-out",
-  "&:hover": {
-    boxShadow: theme.shadows[5],
-  },
-}));
+  transition: 'box-shadow 0.3s ease-in-out',
+  '&:hover': {
+    boxShadow: theme.shadows[5]
+  }
+}))
 
 const AnimatedBox = styled(Box)({
   animation: `$fadeIn 0.5s ease-in-out`,
-  animationFillMode: "forwards",
+  animationFillMode: 'forwards',
   opacity: 0,
-  "@keyframes fadeIn": {
-    "0%": { opacity: 0 },
-    "100%": { opacity: 1 },
-  },
-});
+  '@keyframes fadeIn': {
+    '0%': { opacity: 0 },
+    '100%': { opacity: 1 }
+  }
+})
 
 const DashboardPage = () => {
   return (
     <ThemeProvider theme={theme}>
       {/* <AnimatedBox sx={{ p: 3 }}> */}
-        <Typography variant="h4" gutterBottom>
-          Bookings
-        </Typography>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={4}>
-            <StyledCard>
+      <Typography variant='h4' gutterBottom>
+        Bookings
+      </Typography>
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={4}>
+          <Link passHref href='/pages/bookings'>
+             <StyledCard style={{cursor:'pointer'}}>
               <CardContent>
-                <Poll fontSize="large" color="primary" />
-                <Typography variant="h6" gutterBottom>
+                <Poll fontSize='large' color='primary' />
+                <Typography variant='h6' gutterBottom>
                   Completed Bookings
                 </Typography>
-                <Typography variant="h4">10</Typography>
+                <Typography variant='h4'>10</Typography>
               </CardContent>
             </StyledCard>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <StyledCard>
+          </Link>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Link sx={{cursor:"pointer"}} passHref href='/pages/bookings'>
+             <StyledCard style={{cursor:'pointer'}}>
               <CardContent>
-                <Poll fontSize="large" color="primary" />
-                <Typography variant="h6" gutterBottom>
+                <Poll fontSize='large' color='primary' />
+                <Typography variant='h6' gutterBottom>
                   Ongoing Bookings
                 </Typography>
-                <Typography variant="h4">5</Typography>
+                <Typography variant='h4'>5</Typography>
               </CardContent>
             </StyledCard>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <StyledCard>
+          </Link>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Link sx={{cursor:"pointer"}} passHref href='/pages/bookings'>
+             <StyledCard style={{cursor:'pointer'}}>
               <CardContent>
-                <Poll fontSize="large" color="primary" />
-                <Typography variant="h6" gutterBottom>
+                <Poll fontSize='large' color='primary' />
+                <Typography variant='h6' gutterBottom>
                   Canceled Bookings
                 </Typography>
-                <Typography variant="h4">3</Typography>
+                <Typography variant='h4'>3</Typography>
               </CardContent>
             </StyledCard>
-          </Grid>
+          </Link>
         </Grid>
+      </Grid>
 
-        <Typography variant="h4" gutterBottom sx={{ mt: 4 }}>
-          Revenue
-        </Typography>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={4}>
-            <StyledCard>
-              <CardContent>
-                <AttachMoney fontSize="large" color="primary" />
-                <Typography variant="h6" gutterBottom>
-                  Total Earnings
-                </Typography>
-                <Typography variant="h4">$1000</Typography>
-              </CardContent>
-            </StyledCard>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <StyledCard>
-              <CardContent>
-                <AttachMoney fontSize="large" color="primary" />
-                <Typography variant="h6" gutterBottom>
-                  Expected Earnings
-                </Typography>
-                <Typography variant="h4">$800</Typography>
-              </CardContent>
-            </StyledCard>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <StyledCard>
-              <CardContent>
-                <AttachMoney fontSize="large" color="primary" />
-                <Typography variant="h6" gutterBottom>
-                  Canceled Earnings
-                </Typography>
-                <Typography variant="h4">$200</Typography>
-              </CardContent>
-            </StyledCard>
-          </Grid>
+      <Typography variant='h4' gutterBottom sx={{ mt: 4 }}>
+        Revenue
+      </Typography>
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={4}>
+           <StyledCard style={{cursor:'pointer'}}>
+            <CardContent>
+              <AttachMoney fontSize='large' color='primary' />
+              <Typography variant='h6' gutterBottom>
+                Total Earnings
+              </Typography>
+              <Typography variant='h4'>$1000</Typography>
+            </CardContent>
+          </StyledCard>
         </Grid>
-
-        <Typography variant="h4" gutterBottom sx={{ mt: 4 }}>
-          Statistics
-        </Typography>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={4}>
-            <StyledCard>
-              <CardContent>
-                <HelpOutline fontSize="large" color="primary" />
-                <Typography variant="h6" gutterBottom>
-                  Impressions
-                </Typography>
-                <Typography variant="h4">5000</Typography>
-              </CardContent>
-            </StyledCard>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <StyledCard>
-              <CardContent>
-                <HelpOutline fontSize="large" color="primary" />
-                <Typography variant="h6" gutterBottom>
-                  Clicks
-                </Typography>
-                <Typography variant="h4">200</Typography>
-              </CardContent>
-            </StyledCard>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <StyledCard>
-              <CardContent>
-                <HelpOutline fontSize="large" color="primary" />
-                <Typography variant="h6" gutterBottom>
-                  Conversions
-                </Typography>
-                <Typography variant="h4">10%</Typography>
-              </CardContent>
-            </StyledCard>
-          </Grid>
+        <Grid item xs={12} sm={4}>
+           <StyledCard style={{cursor:'pointer'}}>
+            <CardContent>
+              <AttachMoney fontSize='large' color='primary' />
+              <Typography variant='h6' gutterBottom>
+                Expected Earnings
+              </Typography>
+              <Typography variant='h4'>$800</Typography>
+            </CardContent>
+          </StyledCard>
         </Grid>
+        <Grid item xs={12} sm={4}>
+           <StyledCard style={{cursor:'pointer'}}>
+            <CardContent>
+              <AttachMoney fontSize='large' color='primary' />
+              <Typography variant='h6' gutterBottom>
+                Canceled Earnings
+              </Typography>
+              <Typography variant='h4'>$200</Typography>
+            </CardContent>
+          </StyledCard>
+        </Grid>
+      </Grid>
 
-        <Typography variant="h4" gutterBottom sx={{ mt: 4 }}>
-          Recent Activities
-        </Typography>
-        <StyledCard>
-          <CardContent>
-            <Typography variant="body1" gutterBottom>
-            <NotificationsNoneIcon/>  User sent you a message
-            </Typography>
-            <Typography variant="body1" gutterBottom>
-            <NotificationsNoneIcon/>  Booking completed
-            </Typography>
-            <Typography variant="body1" gutterBottom>
-            <NotificationsNoneIcon/> Total Earnings this week
-            </Typography>
-          </CardContent>
-        </StyledCard>
+      <Typography variant='h4' gutterBottom sx={{ mt: 4 }}>
+        Statistics
+      </Typography>
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={4}>
+           <StyledCard style={{cursor:'pointer'}}>
+            <CardContent>
+              <HelpOutline fontSize='large' color='primary' />
+              <Typography variant='h6' gutterBottom>
+                Impressions
+              </Typography>
+              <Typography variant='h4'>5000</Typography>
+            </CardContent>
+          </StyledCard>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+           <StyledCard style={{cursor:'pointer'}}>
+            <CardContent>
+              <HelpOutline fontSize='large' color='primary' />
+              <Typography variant='h6' gutterBottom>
+                Clicks
+              </Typography>
+              <Typography variant='h4'>200</Typography>
+            </CardContent>
+          </StyledCard>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+           <StyledCard style={{cursor:'pointer'}}>
+            <CardContent>
+              <HelpOutline fontSize='large' color='primary' />
+              <Typography variant='h6' gutterBottom>
+                Conversions
+              </Typography>
+              <Typography variant='h4'>10%</Typography>
+            </CardContent>
+          </StyledCard>
+        </Grid>
+      </Grid>
+
+      <Typography variant='h4' gutterBottom sx={{ mt: 4 }}>
+        Recent Activities
+      </Typography>
+       <StyledCard style={{cursor:'pointer'}}>
+        <CardContent>
+          <Typography variant='body1' gutterBottom>
+            <NotificationsNoneIcon /> User sent you a message
+          </Typography>
+          <Typography variant='body1' gutterBottom>
+            <NotificationsNoneIcon /> Booking completed
+          </Typography>
+          <Typography variant='body1' gutterBottom>
+            <NotificationsNoneIcon /> Total Earnings this week
+          </Typography>
+        </CardContent>
+      </StyledCard>
       {/* </AnimatedBox> */}
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export default DashboardPage;
-
-
-
-
-
-
-
-
-
-
-
+export default DashboardPage
 
 // import React from "react";
 // import {
@@ -543,7 +518,7 @@ export default DashboardPage;
 //         {activeTab === 0 && (
 //           <Grid container spacing={3}>
 //             <Grid item xs={12} sm={4}>
-//               <StyledCard>
+//                <StyledCard style={{cursor:'pointer'}}>
 //                 <CardContent>
 //                   <Poll fontSize="large" color="primary" />
 //                   <Typography variant="h6" gutterBottom>
@@ -560,7 +535,7 @@ export default DashboardPage;
 //         {activeTab === 1 && (
 //           <Grid container spacing={3}>
 //             <Grid item xs={12} sm={4}>
-//               <StyledCard>
+//                <StyledCard style={{cursor:'pointer'}}>
 //                 <CardContent>
 //                   <BusinessCenter fontSize="large" color="primary" />
 //                   <Typography variant="h6" gutterBottom>
@@ -577,7 +552,7 @@ export default DashboardPage;
 //         {activeTab === 2 && (
 //           <Grid container spacing={3}>
 //             <Grid item xs={12} sm={4}>
-//               <StyledCard>
+//                <StyledCard style={{cursor:'pointer'}}>
 //                 <CardContent>
 //                   <HelpOutline fontSize="large" color="primary" />
 //                   <Typography variant="h6" gutterBottom>
@@ -594,7 +569,7 @@ export default DashboardPage;
 //         {activeTab === 3 && (
 //           <Grid container spacing={3}>
 //             <Grid item xs={12} sm={4}>
-//               <StyledCard>
+//                <StyledCard style={{cursor:'pointer'}}>
 //                 <CardContent>
 //                   <AttachMoney fontSize="large" color="primary" />
 //                   <Typography variant="h6" gutterBottom>
@@ -613,7 +588,7 @@ export default DashboardPage;
 //         </Typography>
 //         <Grid container spacing={3}>
 //           <Grid item xs={12} sm={4}>
-//             <StyledCard>
+//              <StyledCard style={{cursor:'pointer'}}>
 //               <CardContent>
 //                 <AttachMoney fontSize="large" color="primary" />
 //                 <Typography variant="h6" gutterBottom>
@@ -624,7 +599,7 @@ export default DashboardPage;
 //             </StyledCard>
 //           </Grid>
 //           <Grid item xs={12} sm={4}>
-//             <StyledCard>
+//              <StyledCard style={{cursor:'pointer'}}>
 //               <CardContent>
 //                 <AttachMoney fontSize="large" color="primary" />
 //                 <Typography variant="h6" gutterBottom>
@@ -635,7 +610,7 @@ export default DashboardPage;
 //             </StyledCard>
 //           </Grid>
 //           <Grid item xs={12} sm={4}>
-//             <StyledCard>
+//              <StyledCard style={{cursor:'pointer'}}>
 //               <CardContent>
 //                 <AttachMoney fontSize="large" color="primary" />
 //                 <Typography variant="h6" gutterBottom>
@@ -652,7 +627,7 @@ export default DashboardPage;
 //         </Typography>
 //         <Grid container spacing={3}>
 //           <Grid item xs={12} sm={4}>
-//             <StyledCard>
+//              <StyledCard style={{cursor:'pointer'}}>
 //               <CardContent>
 //                 <HelpOutline fontSize="large" color="primary" />
 //                 <Typography variant="h6" gutterBottom>
@@ -663,7 +638,7 @@ export default DashboardPage;
 //             </StyledCard>
 //           </Grid>
 //           <Grid item xs={12} sm={4}>
-//             <StyledCard>
+//              <StyledCard style={{cursor:'pointer'}}>
 //               <CardContent>
 //                 <HelpOutline fontSize="large" color="primary" />
 //                 <Typography variant="h6" gutterBottom>
@@ -674,7 +649,7 @@ export default DashboardPage;
 //             </StyledCard>
 //           </Grid>
 //           <Grid item xs={12} sm={4}>
-//             <StyledCard>
+//              <StyledCard style={{cursor:'pointer'}}>
 //               <CardContent>
 //                 <HelpOutline fontSize="large" color="primary" />
 //                 <Typography variant="h6" gutterBottom>
@@ -689,7 +664,7 @@ export default DashboardPage;
 //         <Typography variant="h4" gutterBottom sx={{ mt: 4 }}>
 //           Recent Activities
 //         </Typography>
-//         <StyledCard>
+//          <StyledCard style={{cursor:'pointer'}}>
 //           <CardContent>
 //             <Typography variant="body1" gutterBottom>
 //               <NotificationsNoneIcon /> User sent you a message
