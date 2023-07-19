@@ -1846,7 +1846,7 @@ const ChatComponent = () => {
           <Grid container spacing={2} sx={{ height: '100%', flexWrap: 'nowrap' }}>
             {selectedChat ? (
               <Grid item xs={12} sm={8}>
-                <Paper elevation={3} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                <Paper elevation={3} sx={{ height: '85vh', display: 'flex', flexDirection: 'column' }}>
                   <Box
                     sx={{
                       display: 'flex',
@@ -1934,7 +1934,7 @@ const ChatComponent = () => {
               </Grid>
             ) : (
               <Grid item xs={12} sm={8}>
-                <Paper elevation={3} sx={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                <Paper elevation={3} sx={{ height: '85vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                   <Typography variant='h5' color='text.secondary' gutterBottom>
                     Select a chat to start messaging
                   </Typography>
@@ -1945,7 +1945,25 @@ const ChatComponent = () => {
 
             {selectedChat && selectedUserDetails && (
               <Grid item xs={12} sm={4}>
-                <Paper elevation={3} sx={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <Paper elevation={3}   sx={{
+                  height: '85vh',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  overflow: 'scroll',
+                  '&::-webkit-scrollbar': {
+                    width: '0.4em',
+                    backgroundColor: 'transparent',
+                  },
+                  '&::-webkit-scrollbar-thumb': {
+                    borderRadius: '10px',
+                    backgroundColor: 'transparent',
+                  },
+                  '&::-webkit-scrollbar-thumb:hover': {
+                    backgroundColor: 'transparent',
+                  },
+                }}
+              >
                   <Box sx={{ p: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     <Avatar alt={selectedChat.name} src={`https://avatars.dicebear.com/api/human/${selectedChat.id}.svg`} sx={{ width: 100, height: 100, mb: 2 }} />
                     <Typography variant="h6" color="text.secondary" gutterBottom>
