@@ -1789,7 +1789,7 @@ const ChatComponent = () => {
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop: handleAttachmentDrop });
 
   return (
-    <Box sx={{ p: 3, height: '90vh', backgroundColor: '#F2F6FF' }}>
+    <Box sx={{ p: 3, height: '90vh', backgroundColor: '#fff',borderRadius:'20px' ,boxShadow: `10px 5px 20px 10px #eee`}}>
       <Grid container spacing={2} sx={{ height: '100%', flexWrap: 'wrap' }}>
         <Grid item xs={12} sm={4} sx={{ height: '100%', overflow: 'hidden' }}>
           <Paper elevation={3}>
