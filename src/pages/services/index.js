@@ -306,8 +306,18 @@ import Therapists from "./Therapists"
 
 export default function Services() {
   return (
-    <div>
-    <Banner />
+    <div style={{overflow: "auto",
+    scrollbarWidth: "none !important", 
+    msOverflowStyle: "none !important", overflowX:'hidden'}}>
+    <iframe
+            src="https://kati-services.surge.sh/"
+            title="Kati Services"
+            width="100%"
+            style={{width: '100vw', height: '100vh',overflow: "auto",
+            scrollbarWidth: "none", 
+            msOverflowStyle: "none", }}
+            // height="100vh"  // Adjust the height as needed
+          />
   </div>
   )
 }

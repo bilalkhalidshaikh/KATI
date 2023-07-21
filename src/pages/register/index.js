@@ -355,11 +355,11 @@ const RegisterPage = () => {
   const handleRegister = () => {
     if (values.isUser) {
       // Handle user registration
-      // router.push('/pages/services')
-      router.push('https://kati-services.surge.sh/')
+      router.push('/services')
+      // router.push('https://kati-services.surge.sh/')
     } else if (values.isSeller) {
       // Handle seller registration
-      router.push('/pages/dashboard')
+      router.push('/dashboard')
     }
     // Handle other registration cases here if needed
   }

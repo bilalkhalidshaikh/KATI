@@ -352,8 +352,8 @@ const LoginPage = () => {
 
   const handleLogin = () => {
     if (values.isUser) {
-      // router.push('/services')
-      router.push('https://kati-services.surge.sh/')
+      router.push('/services')
+      // router.push('https://kati-services.surge.sh/')
     } else if (values.isSeller) {
       router.push('/dashboard')
     }
